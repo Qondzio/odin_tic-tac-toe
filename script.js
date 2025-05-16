@@ -86,6 +86,8 @@ const game=(function(){
     function resetGame(){
         createBoard.table=[null,null,null,null,null,null,null,null,null];
         currentPlayer='x';
+        const winnerBanner=document.querySelector(".winner");
+        winnerBanner.style.display="none";
         createBoard.cells.forEach((item)=>{
             item.innerHTML='';
         })
